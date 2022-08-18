@@ -1,0 +1,56 @@
+header{
+    background-color: rgb(246, 96, 166);
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+h1{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgba(162, 77, 241, 0.986);
+}
+
+.navegacion{
+    color: aquamarine;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navegacion-principal{
+display: flex;
+flex-direction: row;
+justify-content:space-around;
+background-color: rgb(171, 97, 240);
+color: chartreuse;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.Destinos{
+    background-color: aqua;
+}
+.titulo{
+    text-align:center;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fondo{
+    background-repeat: no-repeat;
+    height: 250px;
+    background-size: cover;
+    position: relative;
+    background-color: rgb(188, 12, 121);
+}
+
+.contenido-fondo{
+    position: absolute;
+    background-color: rgba(0 0 0 /30%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

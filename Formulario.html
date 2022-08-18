@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Beauty L&E</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <script languaje="Javascript">
+    function esNumero(dato)
+    {
+    var numeros = "^[0-9]+$";
+    if (dato.match(numeros))
+    return true;
+    else
+    return false;
+    }
+    function validaNombre()
+    {
+    var nom = formulario.nombre.value;
+    var tecla = window.event.keyCode;
+    if (tecla == 13)
+    {
+    if(esNumero(nom)|| nom =="" || nom.charAt(0)== " "){
+    alert ("Dato no válido....");
+    formulario.nombre.focus();
+    formulario.nombre.style.backgroundColor= "blue";
+    formulario.nombre.value="";
+    }
+    else
+    {
+    formulario.nombre.style.backgroundColor= "white";
+    nom=nom.toUpperCase();
+    formulario.nombre.value= nom;
+    formulario.apellido.focus();
+}
+}
+}
+function validaApellido()
+{
+var ape = formulario.apellido.value;
+var tecla = window.event.keyCode;
+if (tecla == 13)
+{
+if(esNumero(ape)|| ape =="" || ape.charAt(0)== " "){
+alert ("Dato no válido....");
+formulario.apellido.focus();
+formulario.apellido.style.backgroundColor= "blue";
+formulario.apellido.value="";
+}
+else
+{
+formulario.apellido.style.backgroundColor= "white";
+ape=ape.toUpperCase();
+formulario.apellido.value= nom;
+formulario.familia.focus();
+}
+}
+}
+function validaRespuesta(){
+var resp = document.getElementsByName("respuesta");
+var seleccion = false;
+var respSeleccionada= "";
+for(var i=0; i<resp.length; i++)
+{ if (resp[i].checked)
+{ seleccion= true;
+respSeleccionada= resp[i].value;
+}
+}
+if (seleccion)
+alert ("Respuesta: " + respSeleccionada);
+}
+</script>
+</head>
+
+  <body >
+    <header class="titulo">
+        <img class="icono" src="icono.jpg" alt="" ><span>Beauty L&E</span>
+   </header>
+        <header> <div class="navegacion">
+           <nav class="navegacion">
+               <nav class="navegacion-principal">
+                   <a href="paginaprincipal.html">Inicio</a>
+                   <a href="skincare.html">Skin Care</a>
+                   <a href="corporal.html">Corporal</a>
+                   <a href="ropa.html">Ropa</a>
+                   <a href="zapatosPagina.html">Zapatos</a>
+                   <a href="sucursales.html">Sucursales</a>
+                   <a href="#">Calificanos</a>
+               </nav>
+           </nav>
+       </div>
+   </header>
+
+   <h1>Calificanos</h1>
+    <form action="">
+<fieldset>
+    <legend>Datos Personales</legend>
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" name="nombre" type="text"
+    onkeypress="validaNombre()">
+    <label for="apellido">Apellido:</label>
+    <input id="apellido" name="apellido" type="text"
+    onkeypress="validaApellido()">
+</fieldset>   
+
+<fieldset>
+    <legend>¿Te gusto la experiencia al visitar nuestro sitio web?</legend>
+    <input type="radio" id="respuesta" name="respuesta"
+     value="Sí" onclick="validaRespuesta()">Sí
+    <input type="radio" id="respuesta" name="respuesta"
+     value="No" onclick="validaRespuesta()">No
+    </fieldset>
+    
+    <fieldset>
+        <label for="">¿Tienes alguna sugerencia que hacernos? Escribe tu sugerencia abajo</label>
+        <p></p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <p></p>
+        <button>Salir</button>
+    </fieldset>
+    </legend>
+    </form>
+    
